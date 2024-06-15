@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet">
@@ -17,7 +19,7 @@
 <body>
   <header class="header">
     <div class="content">
-      <a href="/" class="logo">
+      <a href="#" class="logo">
         Doctor<strong>Care</strong>
       </a>
 
@@ -25,21 +27,26 @@
         <a href="#">Inicio</a>
         <a href="#about">Sobre</a>
         <a href="#services">Serviços</a>
-        <a href="">Depoimentos</a>
+        <a href="#">Depoimentos</a>
       </nav>
 
       <a href="" class="schedule">Agendar consulta</a>
     </div>
   </header>
 
-  <section class="hero" id="about">
+  <section class="hero">
     <div class="content">
       <div>
         <h4>BOAS VINDAS A DOCTORCARE 👋</h4>
         <h2>Assistência médica simplificada para todos</h2>
-        <p>Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura
-          a longo prazo.</p>
-        <a href="">Agendar sua consulta</a>
+        <p>
+          Os médicos da DoctorCare vão além dos sintomas para tratar a causa
+          raiz de sua doença e proporcionar uma cura a longo prazo.
+        </p>
+        <a href="#">
+          <i class="ph ph-whatsapp-logo" style="color: white; height: 1rem;"></i>
+          Agendar sua consulta
+        </a>
       </div>
 
       <img src="assets/image.png" alt="Mulher">
@@ -48,51 +55,73 @@
 
   <section class="services" id="services">
     <div class="content">
-      <div>
+      <div class="summary">
         <div>
           <strong>+3.500</strong>
           <span>Pacientes Atendidos</span>
         </div>
+
         <div>
           <strong>+15</strong>
           <span>Especialistas disponiveis</span>
         </div>
+
         <div>
           <strong>+10</strong>
           <span>Anos no mercado</span>
         </div>
       </div>
-      <div>
+
+      <div class="details">
         <h4>Serviços</h4>
-        <h3>Como podemos ajudá-lo a se sentir melhor?</h3>
+        <strong>Como podemos ajudá-lo a se sentir melhor?</strong>
 
         <div>
-          <div>
+          <div class="service">
+            <div class="check">
+              <i class="ph ph-check"></i>
+            </div>
+            <strong>Problemas digestivos</strong>
+            <p>Amet minim mollit non deserunt ullamco est sit
+              aliqua dolor do amet sint. Velit officia consequat duis enim.
+            </p>
+          </div>
+          <div class="service">
+            <div class="check">
+              <i class="ph ph-check"></i>
+            </div>
             <strong>Problemas digestivos</strong>
             <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
               enim.</p>
           </div>
-          <div>
+          <div class="service">
+            <div class="check">
+              <i class="ph ph-check"></i>
+            </div>
             <strong>Problemas digestivos</strong>
             <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
               enim.</p>
           </div>
-          <div>
+          <div class="service">
+            <div class="check">
+              <i class="ph ph-check"></i>
+            </div>
             <strong>Problemas digestivos</strong>
             <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
               enim.</p>
           </div>
-          <div>
+          <div class="service">
+            <div class="check">
+              <i class="ph ph-check"></i>
+            </div>
             <strong>Problemas digestivos</strong>
             <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
               enim.</p>
           </div>
-          <div>
-            <strong>Problemas digestivos</strong>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
-              enim.</p>
-          </div>
-          <div>
+          <div class="service">
+            <div class="check">
+              <i class="ph ph-check"></i>
+            </div>
             <strong>Problemas digestivos</strong>
             <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
               enim.</p>
@@ -101,6 +130,22 @@
       </div>
     </div>
   </section>
+
+  <sectio class="about" id="about">
+    <div class="content">
+      <img src="assets/pic.png" alt="">
+
+      <div>
+        <h4>Sobre nós</h4>
+        <strong>Entenda quem somos e por que existimos</strong>
+        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+      </div>
+    </div>
+  </sectio>
 </body>
 
 </html>
