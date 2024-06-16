@@ -45,7 +45,7 @@ a {
   transition: background-color .25s;
   font-weight: bold;
   padding: 1rem 2rem;
-  
+
   display: flex;
   align-self: flex-start;
   justify-content: center;
@@ -130,7 +130,7 @@ a {
   left: 0;
 }
 
-.header .content > a.schedule_outline {
+.header .content>a.schedule_outline {
   text-decoration: none;
   color: var(--green);
   border: 1px solid var(--green);
@@ -154,15 +154,16 @@ a {
   margin: 0 auto;
   padding: 8.5rem 1rem 9rem;
 
-
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 3rem;
 }
 
 .hero .content div {
   max-width: 550px;
-  
+
   display: flex;
   flex-direction: column;
 }
@@ -191,7 +192,7 @@ a {
   background-color: var(--green-light-02);
 }
 
-.services > .content {
+.services>.content {
   max-width: 1120px;
   margin: -11rem auto 0;
   padding: 2rem 1rem 10rem;
@@ -205,7 +206,6 @@ a {
   margin-bottom: 10rem;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -234,7 +234,7 @@ a {
   align-items: center;
 }
 
-.services .services_details > strong {
+.services .services_details>strong {
   text-align: center;
   color: var(--gray-headline);
   font-size: 2.5rem;
@@ -246,7 +246,6 @@ a {
   margin-top: 3.5rem;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 }
 
@@ -298,11 +297,14 @@ a {
   margin: 0 auto;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 3rem;
 }
 
 .about .content img {
+  order: 2;
   width: 480px;
   width: 414px;
   border-radius: 20px;
@@ -336,11 +338,14 @@ a {
   margin: 0 auto;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 3rem;
 }
 
 .contact .content img {
+  order: 2;
   width: 575px;
   width: 375px;
   border-radius: 20px;
@@ -365,3 +370,68 @@ a {
   list-style: none;
 }
 
+.footer {
+  background-color: var(--green);
+}
+
+.footer .content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .content strong {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.footer .content span {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--white);
+  display: block;
+}
+
+
+.footer .content ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+
+@media (min-width: 728px){
+  .hero .content {
+    flex-direction: row;
+  }
+
+  .header .navigation a {
+    display: flex;
+  }
+
+  .services .summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .services_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about .content {
+    flex-direction: row;
+  }
+
+  .about .content div {
+    order: 2;
+  }
+
+  .contact .content {
+    flex-direction: row;
+  }
+}
