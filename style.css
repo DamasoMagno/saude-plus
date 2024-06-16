@@ -22,6 +22,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* GLOBAL */
 
 body,
@@ -95,13 +99,12 @@ a {
 }
 
 .header .navigation {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 1.5rem;
 }
 
 .header .navigation a {
-  display: none;
   text-decoration: none;
   color: var(--green);
   font-size: 1rem;
@@ -130,17 +133,47 @@ a {
   left: 0;
 }
 
-.header .content>a.schedule_outline {
+.header .schedule_outline {
   text-decoration: none;
   color: var(--green);
   border: 1px solid var(--green);
   border-radius: 40px;
   font-weight: bold;
   padding: .625rem 1.5rem;
+  display: none;
 }
 
-.headerActive {
+.header .close_menu {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}
+
+.floatHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: var(--green-light);
+}
+
+
+@media (min-width: 728px) {
+  .header .navigation {
+    display: flex;
+  }
+
+  .header .schedule_outline {
+    display: flex;
+  }
+
+  .header .close_menu {
+    display: none;
+  }
 }
 
 /* ========= HERO ======== */
@@ -184,6 +217,12 @@ a {
 
 .hero .content img {
   height: 549px;
+}
+
+@media (min-width: 728px) {
+  .hero .content {
+    flex-direction: row;
+  }
 }
 
 /* ======= SERVICES ====== */
@@ -285,6 +324,16 @@ a {
   color: var(--gray-paragraph);
 }
 
+@media (min-width: 728px) {
+  .services .summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* ===== ABOUT ===== */
 
 .about {
@@ -330,6 +379,16 @@ a {
   color: var(--gray-paragraph);
 }
 
+@media (min-width: 728px) {
+  .about .content {
+    flex-direction: row;
+  }
+
+  .about .content div {
+    order: 2;
+  }
+}
+
 /* ===== CONTACT ===== */
 
 .contact .content {
@@ -370,6 +429,16 @@ a {
   list-style: none;
 }
 
+@media (min-width: 728px) {
+  .contact .content {
+    flex-direction: row;
+  }
+
+  .about .content div {
+    order: 2;
+  }
+}
+
 .footer {
   background-color: var(--green);
 }
@@ -403,35 +472,4 @@ a {
   align-items: center;
   gap: 1rem;
   list-style: none;
-}
-
-
-@media (min-width: 728px){
-  .hero .content {
-    flex-direction: row;
-  }
-
-  .header .navigation a {
-    display: flex;
-  }
-
-  .services .summary {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .services_list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .about .content {
-    flex-direction: row;
-  }
-
-  .about .content div {
-    order: 2;
-  }
-
-  .contact .content {
-    flex-direction: row;
-  }
 }
