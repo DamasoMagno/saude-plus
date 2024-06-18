@@ -6,20 +6,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
+
   <title>Saude+</title>
 </head>
 
 <body>
   <header class="header">
     <div class="content">
-      <a href="#" class="logo">
-        Saúde<strong>+</strong>
-      </a>
+      <div class="logo_container">
+        <a href="#" class="logo">
+          Saúde<strong>+</strong>
+        </a>
+
+        <button class="close_menu" title="close menu">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
 
       <nav class="navigation">
         <a href="#">Início</a>
@@ -30,7 +40,7 @@
 
       <a href="#" class="schedule_outline">Agendar consulta</a>
 
-      <button class="close_menu" title="close menus">
+      <button class="open_menu" title="close menu">
         <i class="ph ph-list"></i>
       </button>
     </div>
@@ -47,7 +57,7 @@
             completa e duradoura.
           </p>
           <a href="#" class="schedule">
-            <i class="ph ph-whatsapp-logo" style="color: white; height: 1rem;"></i>
+            <i class="ph ph-whatsapp-logo"></i>
             Agende sua consulta
           </a>
         </div>
@@ -118,33 +128,37 @@
 
     <section class="about" id="about">
       <div class="content">
-        <img src="assets/background.png" alt="">
-
         <div class="about_details">
-          <h4 class="subtitle">Sobre nós</h4>
-          <strong>Quem somos e nossa missão</strong>
-          <p>
-            Na Saude+, nossa missão é oferecer cuidados de saúde acessíveis e de alta qualidade. Com mais de 10 anos de
-            experiência, nossa equipe dedicada de especialistas trabalha para melhorar a saúde e o bem-estar dos nossos
-            pacientes através de um atendimento humanizado e centrado no paciente.
-          </p>
-        </div>
-      </div>
+          <img src="assets/background.png" alt="Background de imagem">
 
-      <div class="summary">
-        <div>
-          <strong>+3.500</strong>
-          <span>Pacientes atendidos</span>
-        </div>
-
-        <div>
-          <strong>+15</strong>
-          <span>Especialistas disponíveis</span>
+          <div class="details">
+            <h4 class="subtitle">Sobre nós</h4>
+            <strong>Quem somos e nossa missão</strong>
+            <p>
+              Na Saude+, nossa missão é oferecer cuidados de saúde acessíveis e de alta qualidade. Com mais de 10 anos
+              de
+              experiência, nossa equipe dedicada de especialistas trabalha para melhorar a saúde e o bem-estar dos
+              nossos
+              pacientes através de um atendimento humanizado e centrado no paciente.
+            </p>
+          </div>
         </div>
 
-        <div>
-          <strong>+10</strong>
-          <span>Anos de experiência</span>
+        <div class="summary">
+          <div>
+            <strong>+3.500</strong>
+            <span>Pacientes atendidos</span>
+          </div>
+
+          <div>
+            <strong>+15</strong>
+            <span>Especialistas disponíveis</span>
+          </div>
+
+          <div>
+            <strong>+10</strong>
+            <span>Anos de experiência</span>
+          </div>
         </div>
       </div>
     </section>
@@ -154,12 +168,8 @@
         <div>
           <strong>Entre em contato conosco!</strong>
           <ul>
-            <li>
-              R. Amarui Souza, 346
-            </li>
-            <li>
-              contato@saudepositive.com
-            </li>
+            <li>R. Amarui Souza, 346</li>
+            <li>contato@saudeplus.com</li>
           </ul>
 
           <a href="#" class="schedule">
@@ -182,12 +192,8 @@
       </div>
 
       <ul>
-        <li>
-          <i class="ph ph-whatsapp-logo" style="color: white;"></i>
-        </li>
-        <li>
-          <i class="ph ph-facebook-logo" style="color: white;"></i>
-        </li>
+        <li><i class="ph ph-whatsapp-logo" style="color: white;"></i></li>
+        <li><i class="ph ph-facebook-logo" style="color: white;"></i></li>
       </ul>
     </div>
   </footer>

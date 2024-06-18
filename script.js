@@ -1,14 +1,27 @@
 const header = document.querySelector("header");
-const button = document.querySelector("button")
+const open_menu = document.querySelector("button.open_menu");
+const close_menu = document.querySelector("button.close_menu");
+const headerChildren = header.querySelector("div");
 
-window.addEventListener("scroll", () => {
-  if (this.scrollY >= 10) {
-    header.classList.add("floatHeader");
-  } else {
-    header.classList.remove("floatHeader");
-  }
+function changeHeaderStyles() {
+  this.scrollY
+    ? header.classList.add("floatHeader")
+    : header.classList.remove("floatHeader");
+}
+
+function removeHeaderMobile(){
+  this.innerWidth >= 728
+  ? headerChildren.classList.remove("menu_mobile")
+  : headerChildren.classList.remove("menu_mobile");
+}
+
+window.addEventListener("scroll", changeHeaderStyles);
+window.addEventListener("resize", removeHeaderMobile);
+
+open_menu.addEventListener("click", () => {
+  headerChildren.classList.add("menu_mobile");
 });
 
-button.addEventListener("click", () => {
-  header.classList.toggle("mobile_menu")
-})
+close_menu.addEventListener("click", () => {
+  headerChildren.classList.remove("menu_mobile");
+});
