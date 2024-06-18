@@ -99,6 +99,12 @@ a {
   align-items: center;
 }
 
+.header .menu_mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header .content:not(.menu_mobile) {
   justify-content: space-between;
 }
@@ -180,6 +186,10 @@ a {
 }
 
 @media (max-width: 728px) {
+  .header .content {
+    justify-content: start;
+  }
+
   .menu_mobile {
     background-color: var(--green);
     width: 100vw;
@@ -257,10 +267,6 @@ a {
 }
 
 @media (min-width: 728px) {
-  .header .content {
-    justify-content: start;
-  }
-
   .header .logo_container {
     width: auto;
   }
