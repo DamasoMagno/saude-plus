@@ -6,8 +6,8 @@
   --beige: #FFFAF1;
 
   /* SECONDARY */
-  --gray-headline: #212529;
-  --gray-paragraph: #495057;
+  --headline: #212529;
+  --paragraph: #495057;
   --white: #FFFFFF;
   --black: #000000;
 
@@ -27,6 +27,7 @@ html {
 }
 
 /* GLOBAL */
+
 
 body,
 input,
@@ -185,105 +186,125 @@ a {
 .hero .content {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 8.5rem 1rem 9rem;
+  padding: 6rem 1rem 0rem;
+  text-align: center;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   gap: 3rem;
 }
 
 .hero .content div {
-  max-width: 550px;
+  max-width: 37.5rem;
 
   display: flex;
   flex-direction: column;
 }
 
+
 .hero .content div h2 {
-  color: var(--gray-headline);
+  color: var(--headline);
   font-size: 3.25rem;
   line-height: 1.3;
   margin: 1rem 0 1.5rem;
 }
 
 .hero .content div p {
-  color: var(--gray-paragraph);
+  color: var(--paragraph);
   font-size: 1.125rem;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
 
+.hero .content div a {
+  margin: 0 auto;
+}
+
 .hero .content img {
-  height: 549px;
+  max-width: 26.25rem;
+  max-height: 34.18rem;
+  object-fit: cover;
 }
 
-@media (min-width: 728px) {
-  .hero .content {
-    flex-direction: row;
-  }
+.summary-container {
+  padding: 2rem 1rem 1rem;
 }
 
-/* ======= SERVICES ====== */
-
-.services {
-  background-color: var(--green-light-02);
-}
-
-.services>.content {
-  max-width: 1120px;
-  margin: -11rem auto 0;
-  padding: 2rem 1rem 10rem;
-}
-
-.services .summary {
-  background-color: var(--beige);
+.summary {
   border-radius: 6px;
-  padding: 3.75rem 0;
-  box-shadow: 1px 1px 2px var(--green-light);
+  padding: 3rem 0rem;
   margin-bottom: 10rem;
+  max-width: 1120px;
+  margin: 0 1rem;
 
   display: grid;
-  gap: 1rem;
+  gap: 3.75rem;
 }
 
-.services .summary div {
+.summary div {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: .4rem;
 }
 
-.services .summary div strong {
+.summary div strong {
   font-size: 2.5rem;
-  color: var(--gray-headline);
+  color: var(--headline);
 }
 
-.services .summary div span {
+.summary div span {
   font-size: 1rem;
   color: var(--green);
 }
 
-.services .services_details {
-  margin-top: 5rem;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media (min-width: 728px) {
+  .hero .content {
+    flex-direction: row;
+  }
+
+  .hero .content div {
+    display: flex;
+    text-align: left;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .hero .content div a {
+    margin: 0;
+  }
 }
 
-.services .services_details>strong {
+/* ======= SERVICES ====== */
+
+.services {
+  background-color: var(--green-light-500);
+}
+
+.services .content {
+  max-width: 1120px;
+  margin: 0rem auto 0;
+  padding: 10rem 1rem;
   text-align: center;
-  color: var(--gray-headline);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services .content > strong {
+  text-align: center;
+  color: var(--headline);
   font-size: 2.5rem;
   max-width: 500px;
   margin-top: 1rem;
 }
 
-.services .services_details .services_list {
-  margin-top: 3.5rem;
-
+.services .content .services_list {
+  margin-top: 4rem;
   display: grid;
   gap: 2.5rem;
 }
@@ -301,7 +322,7 @@ a {
 
 .service div {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
   border-radius: 100%;
   background-color: var(--green-light);
@@ -309,24 +330,39 @@ a {
   height: 1.5rem;
 }
 
-.service i {
+.service div i {
   color: var(--green);
 }
 
 .services .service strong {
   font-size: 1.5rem;
-  color: var(--gray-headline);
+  color: var(--headline);
+  text-align: left;
 }
 
 .services .service p {
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--gray-paragraph);
+  color: var(--paragraph);
+  text-align: justify;
 }
 
 @media (min-width: 728px) {
-  .services .summary {
+  .summary {
     grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+
+  .summary div:not(:last-child)::after {
+    content: "";
+    width: 1px;
+    border-radius: 100px;
+    height: 80%;
+    background-color: var(--green);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .services_list {
@@ -354,8 +390,8 @@ a {
 
 .about .content img {
   order: 2;
-  width: 480px;
-  width: 414px;
+  max-width: 20.43rem;
+  max-height: 17.62rem;
   border-radius: 20px;
 }
 
@@ -368,15 +404,14 @@ a {
   display: block;
   margin-top: .625rem;
   margin-bottom: 1.5rem;
-  width: 70%;
   font-size: 2.5rem;
-  color: var(--gray-headline);
+  color: var(--headline);
 }
 
 .about .content div p {
   line-height: 1.5;
   font-size: 1rem;
-  color: var(--gray-paragraph);
+  color: var(--paragraph);
 }
 
 @media (min-width: 728px) {
@@ -405,21 +440,21 @@ a {
 
 .contact .content img {
   order: 2;
-  width: 575px;
-  width: 375px;
+  max-width: 20.25rem;
+  max-height: 13.32rem;
   border-radius: 20px;
 }
 
 .contact .content div {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
 }
 
 .contact .content div strong {
   font-size: 2.5rem;
-  color: var(--gray-headline);
+  color: var(--headline);
   max-width: 350px;
+  margin-bottom: 2rem;
 }
 
 .contact .content div ul {
@@ -427,6 +462,7 @@ a {
   flex-direction: column;
   gap: .5rem;
   list-style: none;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 728px) {
