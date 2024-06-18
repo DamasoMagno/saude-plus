@@ -86,13 +86,14 @@ a {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 9;
 }
 
 .header .content {
   max-width: 70rem;
   margin: 0 auto;
   padding: 0 1rem;
-  height: 72px;
+  min-height: 72px;
 
   display: flex;
   align-items: center;
@@ -100,6 +101,27 @@ a {
 
 .header .content:not(.menu_mobile) {
   justify-content: space-between;
+}
+
+.header .logo_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo_container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--green);
+}
+
+.header .logo_container .close_menu {
+  display: none;
 }
 
 .header .logo {
@@ -157,45 +179,31 @@ a {
   display: none;
 }
 
-.header .close_menu,
-.header .open_menu {
-  border: 0;
-  outline: 0;
-  background-color: transparent;
-  align-items: center;
-  justify-content: center;
-  color: var(--green);
-}
-
-.header .open_menu {
-  display: flex;
-}
-
-.header .close_menu {
-  display: none;
-}
-
 @media (max-width: 728px) {
   .menu_mobile {
-    padding: 1.5rem 0 !important;
     background-color: var(--green);
     width: 100vw;
-    height: 100vh !important;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-
     display: flex;
     flex-direction: column;
     justify-content: start;
   }
 
-  .menu_mobile .logo_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 1rem;
+  .logo_container {
+    padding: 0 1.5rem;
+    height: 72px;
+  }
+
+  .menu_mobile .logo_container button.close_menu {
+    display: flex !important;
+    color: var(--white);
+  }
+
+  .menu_mobile .logo_container button.open_menu {
+    display: none;
   }
 
   .menu_mobile .navigation {
@@ -222,16 +230,6 @@ a {
     display: flex;
     background-color: var(--white);
   }
-
-  .menu_mobile .close_menu {
-    display: flex;
-    order: 1;
-    color: var(--white);
-  }
-
-  .menu_mobile .open_menu {
-    display: none;
-  }
 }
 
 .floatHeader {
@@ -254,19 +252,21 @@ a {
   background-color: var(--white);
 }
 
-.floatHeader .schedule_outline {
+.floatHeader .logo_container button.open_menu {
   color: var(--white);
-  border-color: var(--white);
-}
-
-.floatHeader .open_menu {
-  color: var(--white);
-  font-size: 1.5rem;
 }
 
 @media (min-width: 728px) {
   .header .content {
     justify-content: start;
+  }
+
+  .header .logo_container {
+    width: auto;
+  }
+
+  .header .logo_container button {
+    display: none;
   }
 
   .header .navigation {
@@ -347,6 +347,11 @@ a {
 
   .hero .content div a {
     margin: 0;
+  }
+
+  .floatHeader .schedule_outline {
+    color: var(--white);
+    border-color: var(--white);
   }
 }
 

@@ -12,7 +12,7 @@ function changeHeaderStyles() {
 function removeHeaderMobile(){
   this.innerWidth >= 728
   ? headerChildren.classList.remove("menu_mobile")
-  : headerChildren.classList.remove("menu_mobile");
+  : headerChildren.classList.add("menu_mobile");
 }
 
 window.addEventListener("scroll", changeHeaderStyles);
