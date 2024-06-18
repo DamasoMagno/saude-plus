@@ -9,14 +9,7 @@ function changeHeaderStyles() {
     : header.classList.remove("floatHeader");
 }
 
-function removeHeaderMobile(){
-  this.innerWidth >= 728
-  ? headerChildren.classList.remove("menu_mobile")
-  : headerChildren.classList.add("menu_mobile");
-}
-
 window.addEventListener("scroll", changeHeaderStyles);
-window.addEventListener("resize", removeHeaderMobile);
 
 open_menu.addEventListener("click", () => {
   headerChildren.classList.add("menu_mobile");
